@@ -1,0 +1,20 @@
+{% extends 'CORE/base.html' %}
+
+{% block TITULO %}
+    <h1>BIENVENIDO</h1>
+{% endblock TITULO %}
+
+{% block CONTENIDO %}
+
+    <h1>LISTA DE CLIENTES DE LA TIENDA ONLINE</h1>
+        {% for x in cliente %}
+            <h2>{{x.nombre}}</h2>
+            <h2>{{x.apellido}}</h2>
+            <p>{{x.email}}</p>
+            <p>{{x.edad}}</p>
+            <p>{{x.pais}}</p>
+            <p>{{x.producto}}</p>
+        {% endfor %}
+        
+
+{% endblock CONTENIDO %}
